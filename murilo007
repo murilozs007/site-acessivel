@@ -1,0 +1,175 @@
+portfolio-charlie/
+├── index.html
+├── style.css
+└── script.js
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfólio de Charlie Bro Junior por Murilo - Desenvolvedor Front-end"/>
+  <title>Charlie Bro Junior - Portfólio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header role="banner">
+    <nav aria-label="Navegação principal">
+      <ul class="menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <h1>Charlie Bro Junior</h1>
+    <p>Portfólio criado por <strong>Murilo</strong></p>
+  </header>
+
+  <main>
+    <section id="sobre" tabindex="0">
+      <h2>Sobre</h2>
+      <p>Charlie Bro Junior é um desenvolvedor apaixonado por tecnologia, inovação e acessibilidade na web.</p>
+    </section>
+
+    <section id="projetos" tabindex="0">
+      <h2>Projetos</h2>
+      <article>
+        <h3>Projeto 1: Site Responsivo</h3>
+        <img src="https://via.placeholder.com/400x200" alt="Imagem ilustrativa do Projeto 1" />
+        <p>Site feito com HTML, CSS e JS totalmente responsivo e acessível.</p>
+      </article>
+      <article>
+        <h3>Projeto 2: App de Tarefas</h3>
+        <img src="https://via.placeholder.com/400x200" alt="Imagem ilustrativa do Projeto 2" />
+        <p>Aplicativo para organização de tarefas, com suporte para teclado e leitores de tela.</p>
+      </article>
+    </section>
+
+    <section id="contato" tabindex="0">
+      <h2>Contato</h2>
+      <form aria-label="Formulário de Contato" id="formContato">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required aria-required="true" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required aria-required="true" />
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por Murilo - © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #222;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  border-bottom: 2px solid #00ffcc;
+  padding-bottom: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+input:focus, textarea:focus {
+  border-color: #00ffcc;
+  outline: 2px solid #00ffcc;
+}
+
+button {
+  background-color: #00cc99;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #009977;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+}
+document.getElementById('formContato').addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Obrigado por entrar em contato! Em breve Murilo responderá.');
+});
